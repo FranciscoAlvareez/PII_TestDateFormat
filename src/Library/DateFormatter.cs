@@ -8,6 +8,7 @@ public class DateFormatter
 
     public static string ChangeFormat(string date)
     {
+        Console.WriteLine(Separaciones(date));
         if(Separaciones(date) && EspaciosLibres(date) && ValoresCorrectos(date))
         {
             string[] parte=date.Split("/");
@@ -21,7 +22,7 @@ public class DateFormatter
         //return date.Substring(6) + "-" + date.Substring(3, 2) + "-" + date.Substring(0, 2);
     }
     public static bool Separaciones(string date){
-        return date.Split("/").Length==3 && (date.IndexOf("/")==2 ||  date.IndexOf("/")==1) && (date.LastIndexOf("/")>=4 && date.LastIndexOf("/")<=6);
+        return date.Split("/").Length==3 && (date.IndexOf("/")==2 &&  date.LastIndexOf("/")==5);
     }
     public static bool EspaciosLibres(string date){
         string[] parte=date.Split("/");
@@ -57,7 +58,7 @@ public class DateFormatter
             int mes=Convert.ToInt32(parte[1]);
             int anio=Convert.ToInt32(parte[2]);
 
-            return (1<=dia && dia<=cantidadDias(mes,anio)) &&(1<=mes && mes<=12)  ; 
+            return (1<=dia && dia<=cantidadDias(mes,anio)) &&(1<=mes && mes<=12) && (parte[2].Length==4) ; 
         }
         catch(Exception ex)
         {
