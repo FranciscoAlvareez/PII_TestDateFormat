@@ -20,3 +20,26 @@ Tu deberás ahora agregar casos de prueba al código existente. Para ello:
     - Una fecha que no tenga el formato correcto
     - Una fecha en blanco
 6. Vas a encontrar errores con tus casos de prueba, porque la función que te damos no los contempla todos. Corrige el código provisto, para que pasen tus casos de prueba.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
